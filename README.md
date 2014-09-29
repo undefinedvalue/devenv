@@ -1,1 +1,1 @@
-Common development environment setup
+Common development environment
