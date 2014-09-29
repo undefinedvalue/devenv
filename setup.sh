@@ -1,6 +1,6 @@
 SCRIPT_SOURCE=$(/bin/readlink -f ${0%/*})
 
-ln -s -t "$HOME" "$SCRIPT_SOURCE/.vimrc" "$SCRIPT_SOURCE/.zshrc"
+ln -s -t "$HOME" "$SCRIPT_SOURCE/.vimrc" "$SCRIPT_SOURCE/.zshrc" "$SCRIPT_SOURCE/.gitconfig"
 
 mkdir "$HOME/.vim"
 mkdir "$HOME/.vim/autoload"
