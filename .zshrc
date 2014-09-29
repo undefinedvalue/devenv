@@ -17,10 +17,7 @@ RPROMPT=$'%{\e[0;32m%}%~%{\e[0m%}'
 
 # Env Vars
 
-
 # PATH
-export PATH="/usr/bin:$PATH:$JAVA_HOME/bin"
-export PATH="$PATH:$HOME/.rbenv/bin"
 
 # Aliases
 alias ls='/bin/ls --color=auto'
@@ -28,5 +25,3 @@ alias ll='/bin/ls -lh --color=auto'
 alias la='/bin/ls -a --color=auto'
 alias less='/usr/bin/less -R'
 
-# rbenv
-eval "$(rbenv init -)"

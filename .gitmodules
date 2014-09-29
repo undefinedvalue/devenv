@@ -1,0 +1,6 @@
+[submodule "dependencies/vim-pathogen"]
+	path = dependencies/vim-pathogen
+	url = git://github.com/tpope/vim-pathogen.git
+[submodule "dependencies/vim-sensible"]
+	path = dependencies/vim-sensible
+	url = git://github.com/tpope/vim-sensible
