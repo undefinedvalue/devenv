@@ -1,5 +1,9 @@
 SCRIPT_SOURCE=$(/bin/readlink -f ${0%/*})
 
+# Pull in the submodules in dependencies
+git submodule init
+git submodule update
+
 ln -s -t "$HOME" "$SCRIPT_SOURCE/.vimrc" "$SCRIPT_SOURCE/.zshrc" "$SCRIPT_SOURCE/.gitconfig"
 
 mkdir "$HOME/.vim"
