@@ -17,8 +17,16 @@ export TERM=xterm-256color
 
 
 ######################### aliases ####################################
+alias orig-ls=ls
+
+if [[ $(uname) == 'Darwin' ]]; then
+  # requires GNU coreutils. OS X decided to implement their
+  # own crappy versions that don't work the same.
+  alias orig-ls='gls'
+fi
+
 alias grep='grep --color=auto'
-alias ls='ls --color=auto'
+alias ls='orig-ls --color=auto'
 alias ll='ls -lh'
 alias la='ls -a'
 alias less='less -R'
