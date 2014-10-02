@@ -45,7 +45,7 @@ function exit {
     if [[ -z $TMUX ]]; then
         builtin exit
     else
-        tmux detach
+        orig-tmux detach
     fi
 }
 
