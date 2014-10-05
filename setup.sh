@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 readlink_cmd=readlink
 ln_cmd=ln
 
