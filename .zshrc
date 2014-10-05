@@ -14,6 +14,7 @@ export TERM=xterm-256color
 
 
 ######################### PATH #######################################
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 
 ######################### aliases ####################################
@@ -46,8 +47,11 @@ bindkey "^F" beginning-of-line
 # line runs command stack is popped
 bindkey "^T" push-line-or-edit
 
+######################### misc #######################################
+eval "$(rbenv init -)"
 
-######################### functions ###############################
+
+######################### functions ##################################
 # Make 'exit' in tmux just detach
 function exit {
     if [[ -z $TMUX ]]; then

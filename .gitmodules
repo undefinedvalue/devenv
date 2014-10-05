@@ -13,3 +13,9 @@
 [submodule "dependencies/screen"]
 	path = dependencies/screen
 	url = git@github.com:ervandew/screen.git
+[submodule "dependencies/rbenv"]
+	path = dependencies/rbenv
+	url = git@github.com:sstephenson/rbenv.git
+[submodule "dependencies/ruby-build"]
+	path = dependencies/ruby-build
+	url = git@github.com:sstephenson/ruby-build.git

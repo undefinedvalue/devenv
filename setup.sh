@@ -34,4 +34,10 @@ $ln_cmd -s -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/vim-haml"
 $ln_cmd -s -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/screen"
 $ln_cmd -s -t "$HOME/.vim/colors" "$SCRIPT_SOURCE/.vim/colors/"*
 
+# Set up ruby
+mkdir "$HOME/.rbenv"
+$ln_cmd -s -t "$HOME/.rbenv" "$SCRIPT_SOURCE/dependencies/rbenv/"*
+mkdir "$HOME/.rbenv/plugins"
+$ln_cmd -s -t "$HOME/.rbenv/plugins" "$SCRIPT_SOURCE/dependencies/ruby-build"
+
 popd
