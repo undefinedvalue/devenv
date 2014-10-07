@@ -22,3 +22,6 @@
 [submodule "dependencies/vim-coffee-script"]
 	path = dependencies/vim-coffee-script
 	url = git@github.com:kchmck/vim-coffee-script.git
+[submodule "dependencies/vim-slim"]
+	path = dependencies/vim-slim
+	url = git@github.com:slim-template/vim-slim.git
