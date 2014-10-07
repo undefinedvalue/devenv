@@ -31,6 +31,7 @@ mkdir "$HOME/.vim/colors"
 $ln_cmd -s -t "$HOME/.vim/autoload" "$SCRIPT_SOURCE/dependencies/vim-pathogen/autoload/"*
 $ln_cmd -s -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/vim-rails"
 $ln_cmd -s -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/vim-haml"
+$ln_cmd -s -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/vim-coffee-script"
 $ln_cmd -s -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/screen"
 $ln_cmd -s -t "$HOME/.vim/colors" "$SCRIPT_SOURCE/.vim/colors/"*
 

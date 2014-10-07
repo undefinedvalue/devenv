@@ -19,3 +19,6 @@
 [submodule "dependencies/ruby-build"]
 	path = dependencies/ruby-build
 	url = git@github.com:sstephenson/ruby-build.git
+[submodule "dependencies/vim-coffee-script"]
+	path = dependencies/vim-coffee-script
+	url = git@github.com:kchmck/vim-coffee-script.git
