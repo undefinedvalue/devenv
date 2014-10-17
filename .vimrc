@@ -1,5 +1,7 @@
 execute pathogen#infect()
 
+source ~/.vim/vimrc
+
 set nocompatible
 
 "Colors
