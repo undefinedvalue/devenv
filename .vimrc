@@ -1,6 +1,8 @@
 execute pathogen#infect()
 
-source ~/.vim/vimrc
+if filereadable("~/.vim/vimrc")
+  source ~/.vim/vimrc
+endif
 
 set nocompatible
 
