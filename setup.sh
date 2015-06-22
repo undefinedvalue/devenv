@@ -12,6 +12,10 @@ fi
 SCRIPT_SOURCE=$($readlink_cmd -f ${0%/*})
 pushd $SCRIPT_SOURCE
 
+# Force this repository to use my public info
+git config user.name 'Anna Bell'
+git config user.email 'undefinedvalue@users.noreply.github.com'
+
 # Pull in the submodules in dependencies
 git submodule init
 git submodule update

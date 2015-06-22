@@ -31,6 +31,7 @@ alias ls='orig-ls --color=auto'
 alias ll='ls -lh'
 alias la='ls -a'
 alias less='less -R'
+alias vi=vim
 # One tmux session to rule them all
 alias orig-tmux=`which tmux`
 alias tmux='orig-tmux new -A -s MAIN'
