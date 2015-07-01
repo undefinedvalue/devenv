@@ -4,6 +4,7 @@ vim
 tmux
 tcptraceroute
 httpd-tools
+nmap
 
 # For rbenv install
 apt-get install autoconf bison build-essential libssl-dev libyaml-dev
