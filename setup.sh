@@ -38,6 +38,7 @@ $ln_cmd -s -f -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/vim-haml"
 $ln_cmd -s -f -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/vim-coffee-script"
 $ln_cmd -s -f -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/vim-slim"
 $ln_cmd -s -f -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/screen"
+$ln_cmd -s -f -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/vim-scala"
 $ln_cmd -s -f -t "$HOME/.vim/colors" "$SCRIPT_SOURCE/.vim/colors/"*
 
 # Set up ruby

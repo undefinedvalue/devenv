@@ -25,3 +25,6 @@
 [submodule "dependencies/vim-slim"]
 	path = dependencies/vim-slim
 	url = git@github.com:slim-template/vim-slim.git
+[submodule "dependencies/vim-scala"]
+	path = dependencies/vim-scala
+	url = git@github.com:derekwyatt/vim-scala.git
