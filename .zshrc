@@ -14,6 +14,7 @@ export TERM=xterm-256color
 
 
 ######################### PATH #######################################
+export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 

@@ -47,4 +47,8 @@ $ln_cmd -s -f -t "$HOME/.rbenv" "$SCRIPT_SOURCE/dependencies/rbenv/"*
 mkdir "$HOME/.rbenv/plugins" > /dev/null 2>&1
 $ln_cmd -s -f -t "$HOME/.rbenv/plugins" "$SCRIPT_SOURCE/dependencies/ruby-build"
 
+# SSH config
+mkdir "$HOME/.ssh" > /dev/null 2>&1
+$ln_cmd -s -t "$HOME/.ssh" "$SCRIPT_SOURCE/.ssh/"*
+
 popd
