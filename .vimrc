@@ -11,6 +11,8 @@ set t_Co=256
 set t_ut=
 colorscheme hammer
 syntax on
+au BufNewFile,BufRead *.html.j2 set filetype=html
+au BufNewFile,BufRead *.js.j2 set filetype=javascript
 
 set number
 
@@ -22,6 +24,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set shiftround
+
+"The python filetype plugin tries to override indent settings, so stop it
+let g:python_recommended_style = 0
 
 "Searching
 set ignorecase
@@ -50,12 +55,14 @@ set ruler                 " the ruler on the bottom is useful
 set scrolloff=1           " dont let the curser get too close to the edge
 set showcmd               " Show (partial) command in status line.
 set textwidth=0           " Don't wrap words by default
-set textwidth=80          " This wraps a line with a break when you reach 80 chars
 set virtualedit=block     " let blocks be in virutal edit mode
 set wildmenu              " This is used with wildmode(full) to cycle options
 set listchars=tab:>-,trail:-                 " prefix tabs with a > and trails with -
 set whichwrap+=<,>,[,],h,l,~                 " arrow keys can wrap in normal and insert modes
 set wildmode=list:longest,full               " list all options, match to the longest
+
+set colorcolumn=80        "Highlight this column
+highlight ColorColumn ctermbg=Gray
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 " These are files I am not likely to want to edit or read.
@@ -98,16 +105,18 @@ let localmapleader=","
 "  }
 "EOT
 
+autocmd FileType python nnoremap <silent> <Leader>r :w<CR> :!python %<CR> <CR>
+
 "screen.vim settings
-let g:ScreenImpl = 'Tmux'
-let g:ScreenShellTmuxInitArgs = 'new -A -s MAIN'
-let g:ScreenShellInitialFocus = 'shell'
-let g:ScreenShellQuitOnVimExit = 1
-map <Leader>v :ScreenShellVertical<CR>
-map <Leader>h :ScreenShell<CR>
-map <Leader>s :ScreenShellReopen<CR>
-command -nargs=? -complete=shellcmd W  :w | :call ScreenShellSend("load '".@%."';")
-map <F5> :w<CR> :call ScreenShellSend("load '" . @% . "'")<CR>
-map <Leader>r :w<CR> :call ScreenShellSend("rspec ".@% . ':' . line('.'))<CR>
-map <Leader>e :w<CR> :call ScreenShellSend("cucumber --format=pretty ".@% . ':' . line('.'))<CR>
-map <Leader>b :w<CR> :call ScreenShellSend("break ".@% . ':' . line('.'))<CR>
+"let g:ScreenImpl = 'Tmux'
+"let g:ScreenShellTmuxInitArgs = 'new -A -s MAIN'
+"let g:ScreenShellInitialFocus = 'shell'
+"let g:ScreenShellQuitOnVimExit = 1
+"map <Leader>v :ScreenShellVertical<CR>
+"map <Leader>h :ScreenShell<CR>
+"map <Leader>s :ScreenShellReopen<CR>
+"command -nargs=? -complete=shellcmd W  :w | :call ScreenShellSend("load '".@%."';")
+"map <F5> :w<CR> :call ScreenShellSend("load '" . @% . "'")<CR>
+"map <Leader>r :w<CR> :call ScreenShellSend("rspec ".@% . ':' . line('.'))<CR>
+"map <Leader>e :w<CR> :call ScreenShellSend("cucumber --format=pretty ".@% . ':' . line('.'))<CR>
+"map <Leader>b :w<CR> :call ScreenShellSend("break ".@% . ':' . line('.'))<CR>

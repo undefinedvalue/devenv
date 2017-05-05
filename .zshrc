@@ -102,3 +102,6 @@ autoload -U compinit
 compinit
 # End of lines added by compinstall
 
+
+# added by travis gem
+[ -f /Users/anna/.travis/travis.sh ] && source /Users/anna/.travis/travis.sh
