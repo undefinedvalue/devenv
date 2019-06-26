@@ -105,17 +105,19 @@ let localmapleader=","
 "  }
 "EOT
 
-autocmd FileType python nnoremap <silent> <Leader>r :w<CR> :!python %<CR> <CR>
+"autocmd FileType python nnoremap <silent> <Leader>r :w<CR> :!python %<CR> <CR>
 
 "screen.vim settings
-"let g:ScreenImpl = 'Tmux'
-"let g:ScreenShellTmuxInitArgs = 'new -A -s MAIN'
-"let g:ScreenShellInitialFocus = 'shell'
-"let g:ScreenShellQuitOnVimExit = 1
-"map <Leader>v :ScreenShellVertical<CR>
-"map <Leader>h :ScreenShell<CR>
-"map <Leader>s :ScreenShellReopen<CR>
-"command -nargs=? -complete=shellcmd W  :w | :call ScreenShellSend("load '".@%."';")
+let g:ScreenImpl = 'Tmux'
+let g:ScreenShellTmuxInitArgs = 'new -A -s MAIN'
+let g:ScreenShellInitialFocus = 'shell'
+let g:ScreenShellQuitOnVimExit = 1
+map <Leader>v :ScreenShellVertical<CR>
+map <Leader>h :ScreenShell<CR>
+map <Leader>s :ScreenShellReopen<CR>
+command -nargs=? -complete=shellcmd W  :w | :call ScreenShellSend("load '".@%."';")
+map <Leader>r :w<CR> :call ScreenShellSend("node ".@%)<CR>
+map <Leader>t :w<CR> :call ScreenShellSend("npm test")<CR>
 "map <F5> :w<CR> :call ScreenShellSend("load '" . @% . "'")<CR>
 "map <Leader>r :w<CR> :call ScreenShellSend("rspec ".@% . ':' . line('.'))<CR>
 "map <Leader>e :w<CR> :call ScreenShellSend("cucumber --format=pretty ".@% . ':' . line('.'))<CR>
