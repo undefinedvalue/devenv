@@ -22,9 +22,9 @@ git submodule update
 
 # One of my hosts hangs when loading the most recent commit of pathogen
 # Use v2.3, which seems stable
-pushd dependencies/vim-pathogen
-git checkout tags/v2.3
-popd
+#pushd dependencies/vim-pathogen
+#git checkout tags/v2.3
+#popd
 
 $ln_cmd -s -t "$HOME" "$SCRIPT_SOURCE/.vimrc" "$SCRIPT_SOURCE/.zshrc" "$SCRIPT_SOURCE/.gitconfig" "$SCRIPT_SOURCE/.tmux.conf"
 
@@ -39,16 +39,17 @@ $ln_cmd -s -f -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/vim-coffee-scr
 $ln_cmd -s -f -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/vim-slim"
 $ln_cmd -s -f -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/screen"
 $ln_cmd -s -f -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/vim-scala"
+$ln_cmd -s -f -t "$HOME/.vim/bundle" "$SCRIPT_SOURCE/dependencies/yats.vim"
 $ln_cmd -s -f -t "$HOME/.vim/colors" "$SCRIPT_SOURCE/.vim/colors/"*
 
 # Set up ruby
-mkdir "$HOME/.rbenv" > /dev/null 2>&1
-$ln_cmd -s -f -t "$HOME/.rbenv" "$SCRIPT_SOURCE/dependencies/rbenv/"*
-mkdir "$HOME/.rbenv/plugins" > /dev/null 2>&1
-$ln_cmd -s -f -t "$HOME/.rbenv/plugins" "$SCRIPT_SOURCE/dependencies/ruby-build"
+#mkdir "$HOME/.rbenv" > /dev/null 2>&1
+#$ln_cmd -s -f -t "$HOME/.rbenv" "$SCRIPT_SOURCE/dependencies/rbenv/"*
+#mkdir "$HOME/.rbenv/plugins" > /dev/null 2>&1
+#$ln_cmd -s -f -t "$HOME/.rbenv/plugins" "$SCRIPT_SOURCE/dependencies/ruby-build"
 
 # SSH config
-mkdir "$HOME/.ssh" > /dev/null 2>&1
-$ln_cmd -s -t "$HOME/.ssh" "$SCRIPT_SOURCE/.ssh/"*
+#mkdir "$HOME/.ssh" > /dev/null 2>&1
+#$ln_cmd -s -t "$HOME/.ssh" "$SCRIPT_SOURCE/.ssh/"*
 
 popd

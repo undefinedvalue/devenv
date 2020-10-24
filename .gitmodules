@@ -22,3 +22,6 @@
 [submodule "dependencies/vim-scala"]
 	path = dependencies/vim-scala
 	url = git@github.com:derekwyatt/vim-scala.git
+[submodule "dependencies/yats.vim"]
+	path = dependencies/yats.vim
+	url = https://github.com/HerringtonDarkholme/yats.vim.git
