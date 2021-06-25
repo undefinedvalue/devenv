@@ -44,6 +44,8 @@ alias vi=vim
 # One tmux session to rule them all
 alias orig-tmux=`which tmux`
 alias jets='AWS_PROFILE=abweb_dev jets'
+alias cdk='npm run-script --silent env -- cdk'
+alias npm="echo 'Use pnpm instead or `which npm`'"
 
 ######################### key bindings ###############################
 bindkey -v # vi mode

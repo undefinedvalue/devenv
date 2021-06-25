@@ -109,7 +109,7 @@ let localmapleader=","
 
 "screen.vim settings
 let g:ScreenImpl = 'Tmux'
-let g:ScreenShellTmuxInitArgs = 'new -A -s MAIN'
+"let g:ScreenShellTmuxInitArgs = 'new -A -s MAIN'
 let g:ScreenShellInitialFocus = 'shell'
 let g:ScreenShellQuitOnVimExit = 1
 map <Leader>v :ScreenShellVertical<CR>
